@@ -95,6 +95,7 @@ GEM
       activesupport (>= 2)
       nokogiri (>= 1.4)
     http_parser.rb (0.6.0)
+    httpclient (2.8.3)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     jekyll (3.8.7)
@@ -207,6 +208,7 @@ GEM
       gemoji (~> 3.0)
       html-pipeline (~> 2.2)
       jekyll (>= 3.0, < 5.0)
+    json (2.3.0)
     kramdown (1.17.0)
     latex-decode (0.3.1)
     liquid (4.0.3)
@@ -230,9 +232,12 @@ GEM
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (3.1.1)
+    rake (13.0.1)
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    reduce (0.3.0)
+      smusher
     rouge (3.19.0)
     ruby-enum (0.8.0)
       i18n
@@ -246,6 +251,10 @@ GEM
     sawyer (0.8.2)
       addressable (>= 2.3.5)
       faraday (> 0.8, < 2.0)
+    smusher (0.4.9)
+      httpclient (>= 2.2)
+      json
+      rake
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     thread_safe (0.3.6)
@@ -264,6 +273,8 @@ DEPENDENCIES
   jekyll-feed (~> 0.12)
   jekyll-scholar
   minima (~> 2.5)
+  rake
+  reduce
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)
