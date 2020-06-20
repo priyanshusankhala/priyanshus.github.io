@@ -62,14 +62,15 @@ experiences:
       time: 2018
       company: Apple Inc. (Cupertino, CA)
       details: |
-        Interned with Mac Systems Quality team at Apple Inc., where
+        Interned with Mac Systems Quality team at [Apple Inc.](https://www.apple.com), where
         I developed a platform that automates many procedures
         of testing Mac systems.
     - role: Software Research Intern
       time: 2017
       company: ABB Inc. (Raleigh, NC)
       details: |
-        Interned at ABB corporate research center, where we developed and evaluated
+        Interned at [ABB corporate research center](https://new.abb.com/about/technology/corporate-research-centers/corporate-research-center-united-states),
+        where we developed and evaluated
         a robotics programming environment for novice programmers.
     - role: Senior Application Architect
       time: 2013 - 2015
