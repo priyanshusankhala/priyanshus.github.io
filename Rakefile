@@ -49,8 +49,7 @@ namespace :build do
   task :dev => :recompile_sass do
     puts "\n##  Starting Sass and Jekyll"
     pids = [
-      spawn("sass --watch assets/scss/styles.scss:assets/css/styles.css --sourcemap=none"),
-      spawn("jekyll serve -w")
+      spawn("bundle exec jekyll serve")
     ]
 
     trap "INT" do
@@ -65,27 +64,24 @@ namespace :build do
 
   desc "Build _site/ for production"
   task :pro => :recompile_sass do
-    puts "\n## Compiling Sass"
-    status = system("sass --style compressed assets/scss/styles.scss:assets/css/styles.css --sourcemap=none")
-    puts status ? "Success" : "Failed"
     puts "\n## Building Jekyll to _site/"
-    status = system("jekyll build")
+    status = system("bundle exec jekyll build")
     puts status ? "Success" : "Failed"
-    Rake::Task["minify"].invoke
+    #Rake::Task["minify"].invoke
   end
 end
 
 desc "Commit _site/"
 task :commit do
   puts "\n## Staging modified files"
-  status = system("git add -A")
+  status = system("git add _site")
   puts status ? "Success" : "Failed"
   puts "\n## Committing a site build at #{Time.now.utc}"
   message = "Build site at #{Time.now.utc}"
   status = system("git commit -m \"#{message}\"")
   puts status ? "Success" : "Failed"
   puts "\n## Pushing commits to remote"
-  status = system("git push origin source")
+  status = system("git push origin gh-pages")
   puts status ? "Success" : "Failed"
 end
 
@@ -101,7 +97,7 @@ task :deploy do
   status = system("git filter-branch --subdirectory-filter _site/ -f")
   puts status ? "Success" : "Failed"
   puts "\n## Switching back to source branch"
-  status = system("git checkout source")
+  status = system("git checkout gh-pages")
   puts status ? "Success" : "Failed"
   puts "\n## Pushing all branches to origin"
   status = system("git push --all origin")
