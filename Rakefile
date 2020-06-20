@@ -34,7 +34,7 @@ task :minify do
         puts "Skipping: #{file}"
       end
   end
-  puts "Total compression %0.2f\%" % (((original-compressed)/original)*100)
+  puts "Total compression %0.2f%%" % (((original-compressed)/original)*100)
 end
 
 desc "Recompile Sass"
@@ -67,7 +67,7 @@ namespace :build do
     puts "\n## Building Jekyll to _site/"
     status = system("bundle exec jekyll build")
     puts status ? "Success" : "Failed"
-    #Rake::Task["minify"].invoke
+    Rake::Task["minify"].invoke
   end
 end
 
