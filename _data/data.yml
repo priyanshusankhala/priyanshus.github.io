@@ -8,7 +8,7 @@ sidebar:
 
     # Profile information
     name: Afsoon Afzal
-    tagline: Ph. D. Candidate 
+    tagline: PhD Candidate 
     location: Carnegie Mellon University
     avatar: afsoon2.jpg  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
@@ -37,9 +37,9 @@ sidebar:
 career-profile:
     title: About Me
     summary: |
-      I am a Ph. D. student in the [Institute for Software Research](https://www.isri.cmu.edu)
+      I am a PhD student in the [Institute for Software Research](https://www.isri.cmu.edu)
       at Carnegie Mellon University. I am a member of [squaresLab](https://squareslab.github.io)
-      under supervision of my advisor [Dr. Claire Le Goues](https://clairelegoues.com).
+      under supervision of my advisor [Prof. Claire Le Goues](https://clairelegoues.com).
       My main reasearch interests are quality assurance for robotics and cyberphysical systems,
       automatic program repair, and program analysis.
       You can download my CV [here](/assets/resume.pdf).
