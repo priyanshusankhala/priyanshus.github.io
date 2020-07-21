@@ -7,13 +7,13 @@ sidebar:
     education: False # set to False if you want education in main section instead of in sidebar
 
     # Profile information
-    name: Afsoon Afzal
-    tagline: PhD Candidate 
-    location: Carnegie Mellon University
-    avatar: afsoon2.jpg  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
+    name: Anisha Gunjal
+    tagline: Machine Learning Engineer
+    location: HyperVerge, Inc
+    avatar: anisha.jpg  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
-    email: afsoona@cs.cmu.edu
+    email: anisha[at]hyperverge[dot]co
     phone: 
     website: cs.cmu.edu/~afsoona #do not add http://
     linkedin: afsoon-afzal
