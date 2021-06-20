@@ -1,1 +1,0 @@
-jQuery(document).ready(function(a){a(".level-bar-inner").css("width","0");a(window).on("load",function(){a(".level-bar-inner").each(function(){var b=a(this).data("level");a(this).animate({width:b},800)})})});
